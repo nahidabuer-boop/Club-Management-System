@@ -1,49 +1,106 @@
-Campus Club Management System
-Project Introduction
-This project implements a lightweight console-based campus club management system using standard C++. It provides all essential functionalities for managing student club information and member records, with a clean and intuitive text-based user interface. No external dependencies are required.
-Main Features
-• Set up basic club information (name and category type)
-• Add new club members with student ID, full name and position
-• Display all members in a neatly formatted table view
-• Search for specific members by their student ID
-• Remove members from the club roster by student ID
-• Calculate and display the total number of club members
-• Pure standard C++ implementation with no external dependencies
-Environment Requirements
-• C++ compiler supporting C++11 standard or newer (GCC / MinGW / MSVC / Clang)
-• No additional libraries or dependencies required
-File Description
-main.cpp # Main source code of the campus club management system
-How to Use
-Run the compiled executable file
-Enter the corresponding number in the main menu to select an operation:
-Set Club Information: Configure the club's name and type
-Add Member: Enter a new member's student ID, name and role
-View All Members: Display all registered members in a formatted table
-Search Member: Find a member using their student ID
-Remove Member: Delete a member from the club by student ID
-Count Members: Show the current total number of club members
-Exit: Close the application safely
-Follow the on-screen prompts to enter required information
-Compile & Run
-Compile command (Windows / Linux / macOS):
+
+# Campus Club Management System
+
+A simple console-based campus club management system implemented in C++. It allows users to manage club information, add and remove members, search for members by student ID, and display club statistics.
+
+## Features
+
+- Set up basic club information (name and type)
+- Add new members with student ID, name, and role
+- Display all members in a formatted table
+- Search for a member by student ID
+- Remove a member by student ID
+- Show total number of club members
+- Clean and user-friendly menu-driven interface
+
+## Project Structure
+
+The program is organized into three main classes:
+
+- **`Member`** – Represents a single club member, storing student ID, name, and role.
+- **`Club`** – Represents a club, containing the club name, type, and a list of members.
+- **`Admin`** – Provides management functions such as searching, deleting, and counting members.
+
+The `main` function provides a text-based menu to interact with these classes.
+
+## Requirements
+
+- A C++ compiler supporting C++11 or later (e.g., g++, clang++, MSVC)
+- Standard C++ libraries (no external dependencies)
+
+## Compilation and Execution
+
+### Using g++
+
 bash
-运行
-g++ main.cpp -o club_management
-Run:
-Windows
-club_management.exe
-Linux / macOS
-./club_management
-Operation Instruction
-• The program will display a numbered main menu after startup
-• Enter the number corresponding to the operation you want to perform
-• Follow the on-screen prompts to input necessary information
-• Press any key to return to the main menu after each operation
-• Enter 0 to exit the program properly
-Principle Overview
-Adopts a modular object-oriented design with three core classes
-Member class encapsulates individual member data and display logic
-Club class manages club information and dynamic member list using STL vector
-Admin class implements administrative operations including search, delete and count
-Main function handles user input and controls program flow through an infinite menu loop
+g++ -std=c++11 -o club_manager main.cpp
+./club_manager
+
+### Using clang++
+
+bash
+clang++ -std=c++11 -o club_manager main.cpp
+./club_manager
+
+
+### On Windows (MinGW)
+
+bash
+g++ -std=c++11 -o club_manager.exe main.cpp
+club_manager.exe
+
+
+> **Note:** Replace `main.cpp` with the actual filename of the source code.
+
+## Usage
+
+When you run the program, you will see a menu with the following options:
+
+
+========= Campus Club Management System =========
+1. Set up basic club information
+2. Add a club member
+3. View all members
+4. Search for a member by student ID
+5. Remove a club member
+6. Count total members
+0. Exit
+=================================================
+Please select an operation:
+
+
+1. **Set up basic club information** – Enter the club name and type (e.g., "Chess Club", "Academic").
+2. **Add a club member** – Enter the student ID, name, and role (e.g., "2024001", "Alice", "President").
+3. **View all members** – Displays a formatted list of all members in the club.
+4. **Search by student ID** – Finds and displays a member’s details by their student ID.
+5. **Remove a club member** – Deletes a member from the club using their student ID.
+6. **Count total members** – Shows the current number of members in the club.
+0. **Exit** – Terminates the program.
+
+Each operation (except exit) will pause before returning to the menu. Follow the on-screen prompts for input.
+
+## Example
+
+
+Please select an operation: 1
+Enter club name: AI Club
+Enter club type: Technology
+Club information set successfully!
+
+Please select an operation: 2
+Enter student ID, name, role: 2025001 John President
+Member added successfully!
+
+Please select an operation: 3
+===== [AI Club] - Technology =====
+Student ID  Name        Role
+2025001     John        President
+
+
+## Author
+
+This project was developed as a collaborative assignment for a C++ programming course.
+
+## License
+
+This project is provided for educational purposes. Feel free to use and modify it.
