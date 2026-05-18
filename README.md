@@ -20,7 +20,6 @@ Note: The current implementation uses cin >> for input, which does not support s
 Compile & Run
 Compile command (Windows / Linux / macOS):
 bash
-运行
 g++ main.cpp -o club_management
 Run:
 Windows:
@@ -28,7 +27,6 @@ cmd
 club_management.exe
 Linux / macOS:
 bash
-运行
 ./club_management
 Operation Instruction
 • The program will display a numbered main menu after startup• Enter the number corresponding to the operation you want to perform• Follow the on-screen prompts to enter required information• After each operation, press any key to return to the main menu• Enter 0 to exit the program safely
